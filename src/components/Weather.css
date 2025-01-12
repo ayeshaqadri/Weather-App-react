@@ -1,14 +1,96 @@
-*{
-    padding: 0;
-    box-shadow: 0;
+/* General Reset */
+* {
     margin: 0;
-}
-.weather {
-    background-image: url('../assets/images/cloud.jpg'); /* Adjust path */
+    padding: 0;
+    box-sizing: border-box;
+  }
+.bg{
+    background-image: url(../assets/images/cloud.jpg);
     background-size: cover;
-    background-position: center;
-    height: 100vh;
+    background-position:  center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+  }
+  .weather {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
   }
+  
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  input {
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 10px;
+    width: 250px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #5750f0;
+    transform: scale(1.05);
+  }
+  
+  .card {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 50px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 300px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+  
+  .card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #add8e6;
+  }
+  
+  .card h4 {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
